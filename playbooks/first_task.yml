@@ -1,0 +1,10 @@
+- name: Ansible - My First Task
+  hosts: localserver
+  become: true
+
+  tasks:
+  - name: Create the directory '/tmp/new_directory'
+    ansible.builtin.file:
+      path: /tmp/new_directory
+      state: directory
+      mode: '0755'
