@@ -8,3 +8,10 @@
       path: /tmp/new_directory
       state: directory
       mode: '0755'
+
+  - name: Update & upgrade apt
+    ansible.builtin.apt:
+      name: "*"
+      state: latest
+      upgrade: yes
+     
